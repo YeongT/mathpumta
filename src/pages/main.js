@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import NavBar from '../components/navbar';
 import ContentTable from '../components/table';
 
+import data from '../sampledata.json';
+
 const Container = styled.div`
+  margin-top: 20px;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -15,17 +18,12 @@ const PageWrapper = styled.div`
   justify-content: center;
 `;
 
-const NoticeText = styled.h2`
-  text-align: center;
-`;
-
 const Main = () => {
   return (
     <PageWrapper>
       <Container>
         <NavBar />
-        <NoticeText>공지 사항 들어갈 곳이구요~</NoticeText>
-        <ContentTable />
+        <ContentTable dataSet={data} />
       </Container>
     </PageWrapper>
   );
