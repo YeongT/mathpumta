@@ -2,8 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import NavBar from '../components/navbar';
 import ContentTable from '../components/table';
-
-import data from '../sampledata.json';
+import sampleData from '../data/sampledata.json';
 
 const Container = styled.div`
   margin-top: 20px;
@@ -19,11 +18,13 @@ const PageWrapper = styled.div`
 `;
 
 const Main = () => {
+  const [dataSet, setDataSet] = React.useState(sampleData || []);
+
   return (
     <PageWrapper>
       <Container>
         <NavBar />
-        <ContentTable dataSet={data} />
+        <ContentTable dataSet={dataSet} update={setDataSet} />
       </Container>
     </PageWrapper>
   );

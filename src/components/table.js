@@ -9,6 +9,9 @@ import Select from '@material-ui/core/Select';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
+import Button from '@material-ui/core/Button';
+import TableSearchHandle from '../data/TableSearchHandler.js';
+
 import {
   Table,
   TableBody,
@@ -41,6 +44,7 @@ const getComparator = (order, orderBy) => {
 };
 
 const stableSort = (array, comparator) => {
+  console.log(array);
   const stabilizedThis = array.map((el, index) => [el, index]);
   stabilizedThis.sort((a, b) => {
     const order = comparator(a[0], b[0]);
@@ -127,6 +131,8 @@ const useStyles = makeStyles((theme) => ({
     width: 1,
   },
   searchFormControl: {
+    marginTop: '10px',
+    maxHeight: '25px',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-end',
@@ -142,7 +148,8 @@ const StickyHeadTable = (props) => {
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   const [category, setCategory] = React.useState('keyword');
-  const [setSearchQuery] = React.useState('');
+  // eslint-disable-next-line no-unused-vars
+  const [searchQuery, setSearchQuery] = React.useState('');
 
   let dataSet = props.dataSet;
 
@@ -167,6 +174,10 @@ const StickyHeadTable = (props) => {
 
   const emptyRows =
     rowsPerPage - Math.min(rowsPerPage, dataSet.length - page * rowsPerPage);
+
+  const WriteNewArticle = () => {
+    /* 새로운 글 작성하는 코드 */
+  };
 
   return (
     <div className={classes.root}>
@@ -198,9 +209,9 @@ const StickyHeadTable = (props) => {
               onChange={(e) => {
                 setSearchQuery(e.target.value);
               }}
-              onKeyPress={(e) => {
+              onKeyPress={async (e) => {
                 if (e.key === 'Enter') {
-                  /*몽고 DB 데이터베이스 쿼리*/
+                  props.update(TableSearchHandle(category, e.target.value));
                 }
               }}
             />
@@ -270,11 +281,23 @@ const StickyHeadTable = (props) => {
           onChangeRowsPerPage={handleChangeRowsPerPage}
         />
       </Paper>
+      <div style={{ display: 'flex', 'justify-content': 'space-between' }}>
+        <FormControlLabel
+          control={<Switch checked={dense} onChange={handleChangeDense} />}
+          label="짧은 행 보기"
+        />
+        <Button
+          variant="contained"
+          onClick={WriteNewArticle}
+          style={{ backgroundColor: 'purple', color: 'white' }}
+        >
+          글쓰기
+        </Button>
+      </div>
 
-      <FormControlLabel
-        control={<Switch checked={dense} onChange={handleChangeDense} />}
-        label="줄이기"
-      />
+      <div style={{ textAlign: 'center', fontSize: '18px' }}>
+        ⓒ Copyright 2020 Mathpumta
+      </div>
     </div>
   );
 };
