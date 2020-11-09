@@ -3,18 +3,12 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
-import TextField from '@material-ui/core/TextField';
 import InputBase from '@material-ui/core/InputBase';
-import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
-import DirectionsIcon from '@material-ui/icons/Directions';
 import {
   Table,
   TableBody,
@@ -110,14 +104,6 @@ const SearchBox = styled.div`
   text-align: right;
 `;
 
-const SearchDropdown = styled.input`
-  text-align: left;
-`;
-
-const SearchInput = styled.input`
-  text-align: left;
-`;
-
 const useStyles = makeStyles((theme) => ({
   root: {
     width: '100%',
@@ -140,15 +126,10 @@ const useStyles = makeStyles((theme) => ({
     top: 20,
     width: 1,
   },
-
   searchFormControl: {
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'flex-end',
-  },
-
-  MuiInputBaseInput: {
-    paddingBottom: '12px',
   },
 }));
 
@@ -160,9 +141,8 @@ const StickyHeadTable = (props) => {
   const [dense, setDense] = React.useState(false);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-  const [category, setCategory] = React.useState('분류');
-
-  const [searchQuery, setSearchQuery] = React.useState('');
+  const [category, setCategory] = React.useState('keyword');
+  const [setSearchQuery] = React.useState('');
 
   let dataSet = props.dataSet;
 
@@ -194,21 +174,23 @@ const StickyHeadTable = (props) => {
         <SearchBox>
           <FormControl className={classes.searchFormControl}>
             <Select
-              id="demo-simple-select"
+              style={{ marginRight: '15px' }}
               value={category}
               onChange={(x) => {
                 setCategory(x.target.value);
               }}
             >
-              <MenuItem style={{ 'padding-bottom': '0px' }} value={'분류'}>
+              <MenuItem style={{ 'padding-bottom': '0px' }} value={'keyword'}>
                 분류
               </MenuItem>
-              <MenuItem value={'math1'}>수1</MenuItem>
-              <MenuItem value={'math2'}>수2</MenuItem>
-              <MenuItem value={'math3'}>수3</MenuItem>
+              <MenuItem value={'math1'}>수I</MenuItem>
+              <MenuItem value={'math2'}>수II</MenuItem>
+              <MenuItem value={'math3'}>미적분</MenuItem>
+              <MenuItem value={'math4'}>수(상)</MenuItem>
+              <MenuItem value={'math5'}>수(하)</MenuItem>
+              <MenuItem value={'math6'}>중등수학</MenuItem>
+              <MenuItem value={'math7'}>초등수학</MenuItem>
             </Select>
-            {/* <TextField id="standard-basic" label="검색어" /> */}
-
             <InputBase
               className={classes.input}
               placeholder="검색어"
@@ -218,7 +200,7 @@ const StickyHeadTable = (props) => {
               }}
               onKeyPress={(e) => {
                 if (e.key === 'Enter') {
-                  alert(searchQuery);
+                  /*몽고 DB 데이터베이스 쿼리*/
                 }
               }}
             />
@@ -232,7 +214,7 @@ const StickyHeadTable = (props) => {
           </FormControl>
         </SearchBox>
       </UpperContainer>
-                
+
       <Paper className={classes.paper}>
         <TableContainer className={classes.container}>
           <Table
