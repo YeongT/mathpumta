@@ -9,6 +9,11 @@ const App = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/" render={() => <Main />} />
+        <Route path="/main" render={() => <Main />} />
+        <Route path="/timer" render={() => <Main />} />
+        <Route path="/info" render={() => <Main />} />
+        <Route path="/newarticle" render={() => <Main />} />
+        <Route path="/article" render={() => <Main />} />
         <Route path="/sample" render={() => <Sample />} />
       </Switch>
     </BrowserRouter>

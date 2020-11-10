@@ -1,9 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import logo from '../data/logo.png';
-
-const Icon = styled.h2`
+const Title = styled.a`
   padding: 0 5px;
+  text-decoration: none;
+  :visited {
+    color: black;
+  }
+  :hover {
+    color: black;
+  }
+  :active {
+    color: black;
+  }
 `;
 
 const ButtonWrapper = styled.div`
@@ -29,12 +37,31 @@ const NavBar = () => {
   return (
     <ButtonWrapper>
       <InnerWrapper>
-        <Icon background={logo} width="120" height="80" alt="Mathpumta">
-          Mathpumta
-        </Icon>
-        <NavButton style={{ marginLeft: '30px' }}>메인 페이지</NavButton>
-        <NavButton>타이머</NavButton>
-        <NavButton>정보</NavButton>
+        <Title href="/main" width="120" height="80">
+          <h2>Mathpumta</h2>
+        </Title>
+        <NavButton
+          onClick={() => {
+            document.location.href = '/main';
+          }}
+          style={{ marginLeft: '30px' }}
+        >
+          메인 페이지
+        </NavButton>
+        <NavButton
+          onClick={() => {
+            document.location.href = '/timer';
+          }}
+        >
+          타이머
+        </NavButton>
+        <NavButton
+          onClick={() => {
+            document.location.href = '/info';
+          }}
+        >
+          정보
+        </NavButton>
       </InnerWrapper>
       <NavButton>로그인</NavButton>
     </ButtonWrapper>

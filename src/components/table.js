@@ -32,10 +32,22 @@ const UpperContainer = styled.div`
   flex-direction: column;
 `;
 
-const BottomContainer = styled.div``;
+const BottomContainer = styled.div`
+  max-height: 45px;
+  display: flex;
+  align-items: space-between;
+  flex-direction: row;
+`;
+const TableControlBox = styled.div`
+  padding-right: 20px;
+  width: 100%;
+`;
 
 const SearchBox = styled.div`
+  padding: '5px 0px';
+  vertical-align: 'center';
   text-align: right;
+  height: 100%;
 `;
 
 const useStyles = makeStyles((theme) => ({
@@ -48,11 +60,12 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
   },
   container: {
-    height: '550px',
+    height: '650px',
+    marginTop: '15px',
   },
   searchFormControl: {
-    marginTop: '10px',
-    maxHeight: '25px',
+    maxHeight: '35px',
+    verticalAlign: 'center',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -70,12 +83,11 @@ const useStyles = makeStyles((theme) => ({
   },
   writeButton: {
     minWidth: '80px',
-    maxHeight: '37px',
     fontFamily: 'Black Han Sans',
     backgroundColor: '#568ae3',
     color: 'white',
     fontSize: '14px',
-    marginRight: '20px',
+    margin: '10px 0px 0px 20px',
   },
   input: { fontFamily: 'Black Han Sans' },
 }));
@@ -147,24 +159,42 @@ const StickyHeadTable = (props) => {
           />
           <SearchBox>
             <Select
-              style={{ marginRight: '15px', fontFamily: 'Poor Story' }}
+              style={{
+                marginRight: '15px',
+                fontFamily: 'Poor Story',
+              }}
               value={category}
               onChange={(x) => {
                 setCategory(x.target.value);
               }}
             >
-              <MenuItem style={{ paddingBottom: '0px' }} value={'keyword'}>
+              <MenuItem style={{ fontFamily: 'Stylish' }} value={'keyword'}>
                 분류
               </MenuItem>
-              <MenuItem value={'math1'}>수I</MenuItem>
-              <MenuItem value={'math2'}>수II</MenuItem>
-              <MenuItem value={'math3'}>미적분</MenuItem>
-              <MenuItem value={'math4'}>수(상)</MenuItem>
-              <MenuItem value={'math5'}>수(하)</MenuItem>
-              <MenuItem value={'math6'}>중등수학</MenuItem>
-              <MenuItem value={'math7'}>초등수학</MenuItem>
+              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math1'}>
+                수I
+              </MenuItem>
+              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math2'}>
+                수II
+              </MenuItem>
+              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math3'}>
+                미적분
+              </MenuItem>
+              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math4'}>
+                수(상)
+              </MenuItem>
+              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math5'}>
+                수(하)
+              </MenuItem>
+              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math6'}>
+                중등수학
+              </MenuItem>
+              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math7'}>
+                초등수학
+              </MenuItem>
             </Select>
             <InputBase
+              style={{ fontSize: '14px', textAlign: 'middle' }}
               className={classes.input}
               placeholder="검색어"
               inputProps={{ 'aria-label': '검색어' }}
@@ -202,11 +232,15 @@ const StickyHeadTable = (props) => {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 return (
-                  <TableRow hover key={row.num} style={{ maxHeight: '10px' }}>
+                  <TableRow hover key={row.num}>
                     {contentColumns.map((column) => {
                       const value = row[column.id];
                       return (
-                        <TableCell key={column.id} align={column.align}>
+                        <TableCell
+                          style={{ fontFamily: 'Noto Sans KR' }}
+                          key={column.id}
+                          align={column.align}
+                        >
                           {column.format && typeof value === 'number'
                             ? column.format(value)
                             : value}
@@ -222,9 +256,9 @@ const StickyHeadTable = (props) => {
               </TableRow>
             )}
           </TableBody>
-          <caption>
-            수학과 상관없는 게시글,댓글은 사전통보없이 삭제되며,<br></br>
-            해당 게시글,댓글을 업로드한 회원은 영구정지 조치 됩니다.
+          <caption style={{ fontFamily: 'Black Han Sans' }}>
+            수학과 상관없는 게시글,댓글은 사전통보없이 삭제되며, 해당
+            게시글,댓글을 업로드한 회원은 영구정지 조치 됩니다.
           </caption>
         </Table>
       </TableContainer>
@@ -232,21 +266,23 @@ const StickyHeadTable = (props) => {
         <Button
           variant="contained"
           onClick={() => {
-            document.location.href = '/new/article';
+            document.location.href = '/newarticle';
           }}
           className={classes.writeButton}
         >
           글쓰기
         </Button>
-        <TablePagination
-          rowsPerPageOptions={[10, 25, 50, 75, 100]}
-          component="div"
-          count={dataSet.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onChangePage={handleChangePage}
-          onChangeRowsPerPage={handleChangeRowsPerPage}
-        />
+        <TableControlBox>
+          <TablePagination
+            rowsPerPageOptions={[5, 10, 25, 30, 40, 50, 75, 100, 125, 150]}
+            component="div"
+            count={dataSet.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onChangePage={handleChangePage}
+            onChangeRowsPerPage={handleChangeRowsPerPage}
+          />
+        </TableControlBox>
       </BottomContainer>
       <p style={{ textAlign: 'center', fontSize: '15px', fontWeight: 'bold' }}>
         ⓒ Copyright 2020 Mathpumta

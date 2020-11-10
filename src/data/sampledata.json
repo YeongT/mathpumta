@@ -1,310 +1,740 @@
 [
   {
-    "num": 1,
+    "num": -4,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 2
+  },
+  {
+    "num": -3,
+    "category": "수학2",
+    "detailed": "다항함수의 미분법",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "쉬움",
+    "watch": 1
+  },
+  {
+    "num": -2,
+    "category": "수학(상)",
+    "detailed": "원의 방정식",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "보통",
+    "watch": 10
+  },
+  {
+    "num": -1,
+    "category": "수학(하)",
+    "detailed": "집합과 명제",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "매우 어려움",
+    "watch": 3
+  },
+  {
+    "num": 0,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 1,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 2,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 3,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 4,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 5,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 6,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 7,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 8,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 9,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 10,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 11,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 12,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 13,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 14,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 15,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 16,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 17,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 18,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 19,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 20,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 21,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 22,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 23,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 24,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 25,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 26,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 27,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 28,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 29,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 30,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 31,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 32,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 33,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 34,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 35,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 36,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 37,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 38,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 39,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 40,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 41,
     "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 42,
-    "category": "수학2",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 43,
-    "category": "수학 상",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   },
   {
     "num": 44,
-    "category": "수학 하",
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
     "title": "이 문제 모르겠어요 ㅠㅠ",
     "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 45,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 46,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 47,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 48,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 49,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 50,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 51,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 52,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 53,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 54,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 55,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 56,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 57,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 58,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 59,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 60,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 61,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 62,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 63,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 64,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 65,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 66,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 67,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 68,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 69,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 70,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 71,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 72,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 73,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 74,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 75,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 76,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
+    "watch": 0
+  },
+  {
+    "num": 77,
+    "category": "수학1",
+    "detailed": "삼각함수의 그래프",
+    "title": "이 문제 모르겠어요 ㅠㅠ",
+    "author": "2417 윤영창",
+    "difficulty": "어려움",
     "watch": 0
   }
 ]

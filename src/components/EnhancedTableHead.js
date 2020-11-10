@@ -19,7 +19,12 @@ const EnhancedTableHead = (props) => {
           <TableCell
             key={column.id}
             align={column.align}
-            style={{ minWidth: column.minWidth }}
+            style={{
+              minWidth: column.minWidth,
+              fontFamily: 'Stylish',
+              fontSize: '16px',
+              fontWeight: 'bold',
+            }}
             sortDirection={orderBy === column.id ? order : false}
           >
             <TableSortLabel
