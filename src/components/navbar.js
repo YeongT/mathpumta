@@ -18,6 +18,8 @@ const InnerWrapper = styled.div`
 `;
 
 const NavButton = styled.button`
+  align-items: center;
+  font-family: 'Black Han Sans';
   width: 100px;
   padding: 5px;
   margin: 0 4px;

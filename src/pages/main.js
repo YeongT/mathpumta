@@ -13,6 +13,7 @@ const Container = styled.div`
 `;
 
 const PageWrapper = styled.div`
+  font-family: 'Sunflower', sans-serif;
   display: flex;
   justify-content: center;
 `;
