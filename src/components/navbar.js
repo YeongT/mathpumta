@@ -3,6 +3,9 @@ import styled from 'styled-components';
 const Title = styled.a`
   padding: 0 5px;
   text-decoration: none;
+  :link {
+    color: black;
+  }
   :visited {
     color: black;
   }

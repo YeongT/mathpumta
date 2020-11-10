@@ -1,21 +1,19 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import Main from './pages/main';
 import Sample from './pages/sample';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Switch>
-        <Route exact path="/" render={() => <Main />} />
-        <Route path="/main" render={() => <Main />} />
-        <Route path="/timer" render={() => <Main />} />
-        <Route path="/info" render={() => <Main />} />
-        <Route path="/newarticle" render={() => <Main />} />
-        <Route path="/article" render={() => <Main />} />
-        <Route path="/sample" render={() => <Sample />} />
-      </Switch>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <Route exact path="/" component={Main} />
+      <Route path="/main" component={Main} />
+      <Route path="/timer" component={Main} />
+      <Route path="/info" component={Main} />
+      <Route path="/newarticle" component={Main} />
+      <Route path="/article" component={Main} />
+      <Route path="/sample" component={Sample} />
     </BrowserRouter>
   );
 };
