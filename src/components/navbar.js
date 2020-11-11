@@ -74,13 +74,22 @@ const NavBar = () => {
           정보
         </NavButton>
       </InnerWrapper>
-      <NavButton
-        onClick={() => {
-          /*로그인 창 띄우기, 쿠키저장*/
-        }}
-      >
-        로그인
-      </NavButton>
+      <InnerWrapper>
+        <NavButton
+          onClick={() => {
+            document.location.href = '/auth/signup';
+          }}
+        >
+          회원가입
+        </NavButton>
+        <NavButton
+          onClick={() => {
+            document.location.href = '/auth/login';
+          }}
+        >
+          로그인
+        </NavButton>
+      </InnerWrapper>
     </ButtonWrapper>
   );
 };

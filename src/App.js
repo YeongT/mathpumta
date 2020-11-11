@@ -6,9 +6,10 @@ import Article from './pages/article';
 import NewArticle from './pages/newArticle';
 import Timer from './pages/timer';
 import Signup from './pages/signup';
+import Login from './pages/login';
 
 import styled from 'styled-components';
-import NavBar from './components/Main/navbar';
+import NavBar from './components/navbar';
 
 const Container = styled.div`
   margin-top: 20px;
@@ -35,6 +36,7 @@ const App = () => {
           <Route path="/article/new" component={NewArticle} />
           <Route path="/article/view" component={Article} />
           <Route path="/auth/signup" component={Signup} />
+          <Route path="/auth/login" component={Login} />
         </Container>
       </PageWrapper>
     </BrowserRouter>
