@@ -38,18 +38,22 @@ const NavButton = styled.button`
   margin: 0 4px;
   border: solid 2px black;
   border-radius: 5px;
+  :hover {
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
 `;
 
 const NavBar = () => {
   return (
     <ButtonWrapper>
       <InnerWrapper>
-        <Title href="/main" width="120" height="80">
+        <Title href="/" width="120" height="80">
           <h2>Mathpumta</h2>
         </Title>
         <NavButton
           onClick={() => {
-            document.location.href = '/main';
+            document.location.href = '/';
           }}
           style={{ marginLeft: '30px' }}
         >
@@ -57,20 +61,26 @@ const NavBar = () => {
         </NavButton>
         <NavButton
           onClick={() => {
-            document.location.href = '/timer';
+            document.location.href = '/feature/timer';
           }}
         >
           타이머
         </NavButton>
         <NavButton
           onClick={() => {
-            document.location.href = '/info';
+            /*개발정보 페이지 띄우기*/
           }}
         >
           정보
         </NavButton>
       </InnerWrapper>
-      <NavButton>로그인</NavButton>
+      <NavButton
+        onClick={() => {
+          /*로그인 창 띄우기, 쿠키저장*/
+        }}
+      >
+        로그인
+      </NavButton>
     </ButtonWrapper>
   );
 };

@@ -1,34 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-import NavBar from '../components/navbar';
-import ContentTable from '../components/table';
+
+import ContentTable from '../components/Main/table';
 import sampleData from '../data/sampledata.json';
-
-const Container = styled.div`
-  margin-top: 20px;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-const PageWrapper = styled.div`
-  font-family: 'Sunflower', sans-serif;
-  display: flex;
-  justify-content: center;
-`;
 
 const Main = () => {
   const [dataSet, setDataSet] = React.useState(sampleData || []);
 
-  return (
-    <PageWrapper>
-      <Container>
-        <NavBar />
-        <ContentTable dataSet={dataSet} updateDataSet={setDataSet} />
-      </Container>
-    </PageWrapper>
-  );
+  return <ContentTable dataSet={dataSet} updateDataSet={setDataSet} />;
 };
 
 export default Main;

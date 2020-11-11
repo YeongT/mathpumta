@@ -22,8 +22,8 @@ import {
 
 import { getComparator, stableSort } from './FieldSortHandler';
 import EnhancedTableHead from './EnhancedTableHead';
-import TableSearchHandle from './TableSearchHandler.js';
-import { contentColumns } from '../data/contentTableColumn';
+import TableSearchHandle from '../InnerAPI/TableSearchHandler.js';
+import { contentColumns } from '../../data/contentTableColumn';
 
 const UpperContainer = styled.div`
   font-family: 'Poor Story';
@@ -289,7 +289,7 @@ const StickyHeadTable = (props) => {
                         value={'▶'}
                         className={classes.viewArticle}
                         onClick={() => {
-                          document.location.href = `/article?postid=${row.postid}`;
+                          document.location.href = `/article/view?postid=${row.postid}`;
                         }}
                       />
                     </TableCell>
@@ -312,7 +312,7 @@ const StickyHeadTable = (props) => {
         <Button
           variant="contained"
           onClick={() => {
-            document.location.href = '/newarticle';
+            document.location.href = '/article/new';
           }}
           className={classes.writeButton}
         >

@@ -13,7 +13,7 @@ const ReturnError = (instruction, msg) => {
 };
 
 const SearchOnDatabase = async (category, keyword) => {
-  const regex = RegExp('^[ㄱ-ㅎ가-힣a-zA-Z0-9 ]*$');
+  const regex = RegExp('^[ㄱ-ㅎ가-힣ㅏ-ㅣa-zA-Z0-9 ]*$');
   if (keyword !== '*' && !regex.test(keyword))
     return ReturnError('입력 값 확인', '입력한 검색어가 올바르지 않습니다');
 
