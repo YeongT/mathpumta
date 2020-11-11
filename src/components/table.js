@@ -20,7 +20,7 @@ import {
   Switch,
 } from '@material-ui/core';
 
-import { getComparator, stableSort } from './SortHandler';
+import { getComparator, stableSort } from './FieldSortHandler';
 import EnhancedTableHead from './EnhancedTableHead';
 import TableSearchHandle from './TableSearchHandler.js';
 import { contentColumns } from '../data/contentTableColumn';
@@ -173,6 +173,8 @@ const StickyHeadTable = (props) => {
           <SearchBox>
             <Select
               style={{
+                fontWeight: 'bold',
+                fontSize: '15px',
                 marginRight: '15px',
                 fontFamily: 'Poor Story',
               }}
