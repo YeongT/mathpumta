@@ -22,7 +22,7 @@ import {
 
 import { getComparator, stableSort } from './SortHandler';
 import EnhancedTableHead from './EnhancedTableHead';
-import TableSearchHandle from '../data/TableSearchHandler.js';
+import TableSearchHandle from './TableSearchHandler.js';
 import { contentColumns } from '../data/contentTableColumn';
 
 const UpperContainer = styled.div`
@@ -54,10 +54,12 @@ const useStyles = makeStyles((theme) => ({
   root: {
     fontFamily: 'Sunflower !important',
     width: '100%',
+    minWidth: '800px',
   },
   paper: {
+    minWidth: '600px',
     width: '100%',
-    marginBottom: theme.spacing(2),
+    marginBottom: theme.spacing(3),
   },
   container: {
     height: '650px',
@@ -90,6 +92,17 @@ const useStyles = makeStyles((theme) => ({
     margin: '10px 0px 0px 20px',
   },
   input: { fontFamily: 'Black Han Sans' },
+  viewArticle: {
+    border: 0,
+    outline: 0,
+    flexDirection: 'column',
+    backgroundColor: 'white',
+    textAlign: 'right',
+    '&:hover': {
+      backgroundColor: '#F5F5F5',
+      cursor: 'pointer',
+    },
+  },
 }));
 
 const StickyHeadTable = (props) => {
@@ -100,7 +113,7 @@ const StickyHeadTable = (props) => {
   const [dense, setDense] = React.useState(false);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
-  const [category, setCategory] = React.useState('keyword');
+  const [category, setCategory] = React.useState('*');
   // eslint-disable-next-line no-unused-vars
   const [searchQuery, setSearchQuery] = React.useState('');
 
@@ -168,8 +181,8 @@ const StickyHeadTable = (props) => {
                 setCategory(x.target.value);
               }}
             >
-              <MenuItem style={{ fontFamily: 'Stylish' }} value={'keyword'}>
-                분류
+              <MenuItem style={{ fontFamily: 'Stylish' }} value={'*'}>
+                전체
               </MenuItem>
               <MenuItem style={{ fontFamily: 'Stylish' }} value={'math1'}>
                 수I
@@ -203,7 +216,20 @@ const StickyHeadTable = (props) => {
               }}
               onKeyPress={async (e) => {
                 if (e.key === 'Enter') {
-                  props.update(TableSearchHandle(category, e.target.value));
+                  props.updateDataSet([
+                    {
+                      num: 0,
+                      category: '안내',
+                      detailed: '로딩중',
+                      title: '해당 조건의 게시글을 검색중입니다.',
+                      author: '시스템',
+                      difficulty: 200,
+                      watch: 0,
+                    },
+                  ]);
+                  await props.updateDataSet(
+                    await TableSearchHandle(category, e.target.value || '*')
+                  );
                 }
               }}
             />
@@ -247,6 +273,24 @@ const StickyHeadTable = (props) => {
                         </TableCell>
                       );
                     })}
+                    <TableCell
+                      style={{
+                        fontFamily: 'Noto Sans KR',
+                        maxWidth: '15px',
+                        minWidth: '5px',
+                      }}
+                      key={0}
+                      align={'right'}
+                    >
+                      <input
+                        type={'button'}
+                        value={'▶'}
+                        className={classes.viewArticle}
+                        onClick={() => {
+                          document.location.href = `/article?postid=${row.postid}`;
+                        }}
+                      />
+                    </TableCell>
                   </TableRow>
                 );
               })}

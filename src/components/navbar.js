@@ -32,6 +32,7 @@ const NavButton = styled.button`
   align-items: center;
   font-family: 'Black Han Sans';
   width: 100px;
+  min-width: 70px;
   padding: 5px;
   margin: 0 4px;
 `;

@@ -25,7 +25,7 @@ const Main = () => {
     <PageWrapper>
       <Container>
         <NavBar />
-        <ContentTable dataSet={dataSet} update={setDataSet} />
+        <ContentTable dataSet={dataSet} updateDataSet={setDataSet} />
       </Container>
     </PageWrapper>
   );

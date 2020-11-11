@@ -21,6 +21,7 @@ const EnhancedTableHead = (props) => {
             align={column.align}
             style={{
               minWidth: column.minWidth,
+              maxWidth: column.maxWidth,
               fontFamily: 'Stylish',
               fontSize: '16px',
               fontWeight: 'bold',
@@ -41,6 +42,18 @@ const EnhancedTableHead = (props) => {
             </TableSortLabel>
           </TableCell>
         ))}
+        <TableCell
+          key={-1}
+          align={'right'}
+          style={{
+            maxWidth: '5px',
+            fontFamily: 'Stylish',
+            fontSize: '16px',
+            fontWeight: 'bold',
+          }}
+        >
+          보기
+        </TableCell>
       </TableRow>
     </TableHead>
   );
