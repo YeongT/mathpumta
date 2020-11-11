@@ -331,7 +331,7 @@ const StickyHeadTable = (props) => {
         </TableControlBox>
       </BottomContainer>
       <p style={{ textAlign: 'center', fontSize: '15px', fontWeight: 'bold' }}>
-        ⓒ Copyright 2020 Mathpumta
+        ⓒ Copyright 2020 Mathpumta All Rights Reserved.
       </p>
     </Paper>
   );
