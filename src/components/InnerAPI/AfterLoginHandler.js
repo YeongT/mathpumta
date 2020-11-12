@@ -1,6 +1,5 @@
-const onLoginTask = () => {
+const onLoginTask = async () => {
   alert('login');
-  return false;
 };
 
 export default onLoginTask;

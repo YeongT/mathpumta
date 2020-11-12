@@ -5,8 +5,8 @@ import Main from './pages/main';
 import Article from './pages/article';
 import NewArticle from './pages/newArticle';
 import Timer from './pages/timer';
-import Signup from './pages/signup';
-import Login from './pages/login';
+import Signup from './components/Auth/signup';
+import Login from './components/Auth/login';
 
 import styled from 'styled-components';
 import NavBar from './components/navbar';
