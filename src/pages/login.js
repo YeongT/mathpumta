@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
+import LoginHandler from '../components/InnerAPI/AfterLoginHandler';
 
 const LoginForm = styled.div`
   margin-top: 60px;
@@ -14,6 +15,11 @@ const LoginForm = styled.div`
 const TitleWrapper = styled.div`
   max-width: '10px';
   margin: auto auto;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
 `;
 
 const useStyles = makeStyles((theme) => ({
@@ -30,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: 'Black Han Sans',
   },
   register: {
+    marginTop: '60px',
     border: 0,
     outline: 0,
     flexDirection: 'column',
@@ -43,21 +50,27 @@ const useStyles = makeStyles((theme) => ({
 
 const Login = () => {
   const classes = useStyles();
- 
+
   return (
     <div style={{ textAlign: 'center', margin: 'auto auto' }}>
       <LoginForm>
         <TitleWrapper>
           <h1>로그인</h1>
         </TitleWrapper>
-        <form className={classes.form}>
+        <form
+          className={classes.form}
+          action={'/auth/login/complete'}
+          onSubmit={LoginHandler}
+        >
           <TextField
             variant="outlined"
             margin="normal"
             required
             fullWidth
             id="email"
-            label="Email Address"
+            label={
+              <div style={{ fontFamily: 'Noto Sans KR' }}>이메일 주소</div>
+            }
             name="email"
             autoComplete="email"
             autoFocus
@@ -68,7 +81,7 @@ const Login = () => {
             required
             fullWidth
             name="password"
-            label="Password"
+            label={<div style={{ fontFamily: 'Noto Sans KR' }}>비밀번호</div>}
             type="password"
             id="password"
             autoComplete="current-password"
