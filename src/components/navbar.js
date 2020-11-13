@@ -68,7 +68,7 @@ const NavBar = () => {
         </NavButton>
         <NavButton
           onClick={() => {
-            /*개발정보 페이지 띄우기*/
+            document.location.href = '/info';
           }}
         >
           정보

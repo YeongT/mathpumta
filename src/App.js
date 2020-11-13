@@ -5,6 +5,7 @@ import Main from './pages/main';
 import Article from './pages/article';
 import NewArticle from './pages/newArticle';
 import Timer from './pages/timer';
+import Info from './pages/info';
 import Signup from './components/Auth/signup';
 import Login from './components/Auth/login';
 
@@ -37,6 +38,7 @@ const App = () => {
           <Route path="/article/view" component={Article} />
           <Route path="/auth/signup" component={Signup} />
           <Route path="/auth/login" component={Login} />
+          <Route path="/info" component={Info} />
         </Container>
       </PageWrapper>
     </BrowserRouter>
