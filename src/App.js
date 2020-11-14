@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom';
 
 import Main from './pages/main';
 import Article from './pages/article';
 import NewArticle from './pages/newArticle';
+import NotFoundPage from './pages/notFound';
 import Timer from './pages/timer';
 import Info from './pages/info';
 import Signup from './components/Auth/signup';
@@ -32,13 +33,17 @@ const App = () => {
       <PageWrapper>
         <Container>
           <NavBar />
-          <Route exact path="/" component={Main} />
-          <Route path="/feature/timer" component={Timer} />
-          <Route path="/article/new" component={NewArticle} />
-          <Route path="/article/view" component={Article} />
-          <Route path="/auth/signup" component={Signup} />
-          <Route path="/auth/login" component={Login} />
-          <Route path="/info" component={Info} />
+          <Switch>
+            <Route exact path="/" component={Main} />
+            <Route path="/feature/timer" component={Timer} />
+            <Route path="/article/new" component={NewArticle} />
+            <Route path="/article/view/:postid" component={Article} />
+            <Route path="/auth/signup" component={Signup} />
+            <Route path="/auth/login" component={Login} />
+            <Route path="/info" component={Info} />
+            <Route path="/error/404" component={NotFoundPage} />
+            <Redirect to="/error/404" />
+          </Switch>
         </Container>
       </PageWrapper>
     </BrowserRouter>

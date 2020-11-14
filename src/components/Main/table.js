@@ -289,7 +289,7 @@ const StickyHeadTable = (props) => {
                         value={'▶'}
                         className={classes.viewArticle}
                         onClick={() => {
-                          document.location.href = `/article/view?postid=${row.postid}`;
+                          document.location.href = `/article/view/${row._id}`;
                         }}
                       />
                     </TableCell>
