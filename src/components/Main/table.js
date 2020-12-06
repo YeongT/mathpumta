@@ -2,9 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
 import InputBase from '@material-ui/core/InputBase';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
@@ -22,6 +20,7 @@ import {
 
 import { getComparator, stableSort } from './FieldSortHandler';
 import EnhancedTableHead from './EnhancedTableHead';
+import MathCategoryDropdown from './MathCategoryDropdown';
 import TableSearchHandle from '../InnerAPI/TableSearchHandler.js';
 import { contentColumns } from '../../data/contentTableColumn';
 
@@ -171,43 +170,7 @@ const StickyHeadTable = (props) => {
             }
           />
           <SearchBox>
-            <Select
-              style={{
-                fontWeight: 'bold',
-                fontSize: '15px',
-                marginRight: '15px',
-                fontFamily: 'Poor Story',
-              }}
-              value={category}
-              onChange={(x) => {
-                setCategory(x.target.value);
-              }}
-            >
-              <MenuItem style={{ fontFamily: 'Stylish' }} value={'*'}>
-                전체
-              </MenuItem>
-              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math1'}>
-                수I
-              </MenuItem>
-              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math2'}>
-                수II
-              </MenuItem>
-              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math3'}>
-                미적분
-              </MenuItem>
-              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math4'}>
-                수(상)
-              </MenuItem>
-              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math5'}>
-                수(하)
-              </MenuItem>
-              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math6'}>
-                중등수학
-              </MenuItem>
-              <MenuItem style={{ fontFamily: 'Stylish' }} value={'math7'}>
-                초등수학
-              </MenuItem>
-            </Select>
+            <MathCategoryDropdown updateCategory={setCategory} />
             <InputBase
               style={{ fontSize: '14px', textAlign: 'middle' }}
               className={classes.input}

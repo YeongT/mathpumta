@@ -1,5 +1,5 @@
 const contentColumns = [
-  { id: 'num', label: '번호', minWidth: '15px', maxWidth: '20px' },
+  { id: 'num', label: '번', minWidth: '15px', maxWidth: '20px' },
   {
     id: 'category',
     label: '카테고리',
