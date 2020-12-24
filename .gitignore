@@ -22,3 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 src/components/sample.js
+.env.production
+.env.development

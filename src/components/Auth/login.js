@@ -6,7 +6,7 @@ import LoginHandler from '../InnerAPI/AfterLoginHandler';
 import LoginArea from './ContentArea';
 import useStyles from './useStyle';
 
-const Login = () => {
+const Login = (props) => {
   const classes = useStyles();
 
   return (
@@ -43,7 +43,9 @@ const Login = () => {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={LoginHandler}
+            onClick={() => {
+              LoginHandler(props.cookies);
+            }}
           >
             로그인
           </Button>

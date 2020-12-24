@@ -25,10 +25,9 @@ const SearchOnDatabase = async (category, keyword) => {
     );
 
   const request = async () => {
-    console.log(category);
     return new Promise(async (resolve) => {
       $.ajax({
-        url: 'https://java.dimigo.codes/api/article/search',
+        url: `${process.env.REACT_APP_SERVER}/api/article/search`,
         type: 'post',
         data: `category=${category}&keyword=${keyword}`,
         success: ({ statusCode, output }) => {

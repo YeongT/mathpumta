@@ -161,7 +161,15 @@ const SignUp = () => {
             variant="contained"
             color="secondary"
             className={classes.submit}
-            onClick={SignUpHandler}
+            onClick={() =>
+              SignUpHandler(
+                emailError,
+                passwordError,
+                passwordChkError,
+                nameError,
+                schoolError
+              )
+            }
             disabled={
               schoolError ||
               nameError ||
