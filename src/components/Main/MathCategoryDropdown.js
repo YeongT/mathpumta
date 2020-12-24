@@ -14,7 +14,7 @@ const MenuItemSpan = ({ label }) => (
   </span>
 );
 
-const MathCategorySelecter = ({ updateCategory }) => {
+const MathCategorySelector = ({ updateCategory }) => {
   const [category, setCategory] = React.useState('*');
 
   return (
@@ -25,6 +25,7 @@ const MathCategorySelecter = ({ updateCategory }) => {
         margin: '0 3px 0 10px',
         fontFamily: 'Poor Story',
       }}
+      name="category"
       value={category}
       onChange={(event) => {
         setCategory(event.target.value);
@@ -59,4 +60,4 @@ const MathCategorySelecter = ({ updateCategory }) => {
   );
 };
 
-export default MathCategorySelecter;
+export default MathCategorySelector;

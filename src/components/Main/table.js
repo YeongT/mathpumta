@@ -114,9 +114,6 @@ const StickyHeadTable = (props) => {
 
   const [category, setCategory] = React.useState('*');
   // eslint-disable-next-line no-unused-vars
-  const [searchQuery, setSearchQuery] = React.useState('');
-
-  let dataSet = props.dataSet;
 
   const handleRequestSort = (event, property) => {
     const isDesc = orderBy === property && order === 'desc';
@@ -137,8 +134,23 @@ const StickyHeadTable = (props) => {
     setDense(event.target.checked);
   };
 
+  const onSearchLoad = () => {
+    props.updateDataSet([
+      {
+        id: 0,
+        category: '안내',
+        detailed: '로딩중',
+        title: '해당 조건의 게시글을 검색중입니다.',
+        author: '시스템',
+        difficulty: 200,
+        watch: 0,
+      },
+    ]);
+  };
+
   const emptyRows =
-    rowsPerPage - Math.min(rowsPerPage, dataSet.length - page * rowsPerPage);
+    rowsPerPage -
+    Math.min(rowsPerPage, props.dataSet.length - page * rowsPerPage);
 
   return (
     <Paper className={classes.paper}>
@@ -172,33 +184,32 @@ const StickyHeadTable = (props) => {
           <SearchBox>
             <MathCategoryDropdown updateCategory={setCategory} />
             <InputBase
+              id="searchBox"
               style={{ fontSize: '14px', textAlign: 'middle' }}
               className={classes.input}
               placeholder="검색어"
               inputProps={{ 'aria-label': '검색어' }}
-              onChange={(e) => {
-                setSearchQuery(e.target.value);
-              }}
               onKeyPress={async (e) => {
                 if (e.key === 'Enter') {
-                  props.updateDataSet([
-                    {
-                      num: 0,
-                      category: '안내',
-                      detailed: '로딩중',
-                      title: '해당 조건의 게시글을 검색중입니다.',
-                      author: '시스템',
-                      difficulty: 200,
-                      watch: 0,
-                    },
-                  ]);
-                  await props.updateDataSet(
+                  onSearchLoad();
+                  props.updateDataSet(
                     await TableSearchHandle(category, e.target.value || '*')
                   );
                 }
               }}
             />
-            <IconButton type="submit" aria-label="search">
+            <IconButton
+              onClick={async () => {
+                onSearchLoad();
+                props.updateDataSet(
+                  await TableSearchHandle(
+                    category,
+                    document.getElementById('searchBox').value || '*'
+                  )
+                );
+              }}
+              aria-label="search"
+            >
               <SearchIcon />
             </IconButton>
           </SearchBox>
@@ -216,14 +227,14 @@ const StickyHeadTable = (props) => {
             orderBy={orderBy}
             onRequestSort={handleRequestSort}
             contentColumns={contentColumns}
-            rowCount={dataSet.length}
+            rowCount={props.dataSet.length}
           />
           <TableBody>
-            {stableSort(dataSet, getComparator(order, orderBy))
+            {stableSort(props.dataSet, getComparator(order, orderBy))
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map((row) => {
                 return (
-                  <TableRow hover key={row.num}>
+                  <TableRow hover key={row.id}>
                     {contentColumns.map((column) => {
                       const value = row[column.id];
                       return (
@@ -234,6 +245,8 @@ const StickyHeadTable = (props) => {
                         >
                           {column.format && typeof value === 'number'
                             ? column.format(value)
+                            : value === '*'
+                            ? '전체'
                             : value}
                         </TableCell>
                       );
@@ -252,7 +265,7 @@ const StickyHeadTable = (props) => {
                         value={'▶'}
                         className={classes.viewArticle}
                         onClick={() => {
-                          document.location.href = `/article/view/${row._id}`;
+                          document.location.href = `/article/view/${row.id}`;
                         }}
                       />
                     </TableCell>
@@ -285,7 +298,7 @@ const StickyHeadTable = (props) => {
           <TablePagination
             rowsPerPageOptions={[5, 10, 25, 30, 40, 50, 75, 100, 125, 150]}
             component="div"
-            count={dataSet.length}
+            count={props.dataSet.length}
             rowsPerPage={rowsPerPage}
             page={page}
             onChangePage={handleChangePage}
