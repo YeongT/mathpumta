@@ -9,9 +9,9 @@ import Timer from './pages/timer';
 import Info from './pages/info';
 import Signup from './components/Auth/signup';
 import Login from './components/Auth/login';
-
 import styled from 'styled-components';
 import NavBar from './components/navbar';
+import { withCookies } from 'react-cookie';
 
 const Container = styled.div`
   margin-top: 20px;
@@ -27,19 +27,25 @@ const PageWrapper = styled.div`
   justify-content: center;
 `;
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <PageWrapper>
         <Container>
-          <NavBar />
+          <NavBar cookies={props.cookies} />
           <Switch>
             <Route exact path="/" component={Main} />
             <Route path="/feature/timer" component={Timer} />
-            <Route path="/article/new" component={NewArticle} />
+            <Route
+              path="/article/new"
+              component={() => <NewArticle cookies={props.cookies} />}
+            />
             <Route path="/article/view/:postid" component={Article} />
             <Route path="/auth/signup" component={Signup} />
-            <Route path="/auth/login" component={Login} />
+            <Route
+              path="/auth/login"
+              render={() => <Login cookies={props.cookies} />}
+            />
             <Route path="/info" component={Info} />
             <Route path="/error/404" component={NotFoundPage} />
             <Redirect to="/error/404" />
@@ -50,4 +56,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withCookies(App);

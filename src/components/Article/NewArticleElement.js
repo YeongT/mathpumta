@@ -102,7 +102,7 @@ const ArticleRadioButton = (props) => (
 
 const textareaNotice =
   "[주의사항]\n한 게시글에 한 질문씩!\n소분류 입력란에는 '도함수의 활용'같은 소단원 명 또는 기출 출처을 기재해주세요.\n비속어를 포함하거나, 페이지 이용목적에 부합하지 않는 게시글은 제제 대상 입니다.";
-const RenderArticleForm = () => {
+const RenderArticleForm = (cookies) => {
   const [fileText, setFileText] = React.useState('선택된 사진이 없습니다.');
   const [difficulty, setdifficulty] = React.useState('MIDDLE');
   return (
@@ -187,7 +187,8 @@ const RenderArticleForm = () => {
       </InputWrapper>
       <InputWrapper style={{ display: 'flex', justifyContent: 'center' }}>
         <ArticleInput id="picturelink" name="image" type="hidden" />
-        <PostButton onClick={newArticleHandler}>게시</PostButton>
+        <ArticleInput id="userEmail" name="email" type="hidden" />
+        <PostButton onClick={() => newArticleHandler(cookies)}>게시</PostButton>
       </InputWrapper>
     </>
   );

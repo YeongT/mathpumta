@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-const onArticleSubmit = async () => {
+const onArticleSubmit = async (cookies) => {
   let pictureFiles = [];
 
   Array.from(
@@ -9,10 +9,11 @@ const onArticleSubmit = async () => {
     pictureFiles.push(window.URL.createObjectURL(element))
   );
   document.getElementById('picturelink').value = pictureFiles;
+  document.getElementById('userEmail').value = cookies.get('userEmail');
 
   const formData = $('#newArticleForm').serialize();
   $.ajax({
-    url: 'https://java.dimigo.codes/api/article/post',
+    url: `${process.env.REACT_APP_SERVER}/api/article/post`,
     type: 'post',
     data: formData,
     success: async (data) => {
