@@ -1,22 +1,22 @@
 import $ from 'jquery';
 
-const onArticleSubmit = async () => {
+const onArticleSubmit = async (cookies) => {
   let pictureFiles = [];
 
   Array.from(
-    document.getElementById('pictures').files || []
+    document.getElementById('pictures').files || ['none']
   ).forEach((element) =>
     pictureFiles.push(window.URL.createObjectURL(element))
   );
   document.getElementById('picturelink').value = pictureFiles;
+  document.getElementById('userEmail').value = cookies.get('userEmail');
 
   const formData = $('#newArticleForm').serialize();
   $.ajax({
-    url: 'https://java.dimigo.codes/api/article/post',
+    url: `${process.env.REACT_APP_SERVER}/api/article/post`,
     type: 'post',
     data: formData,
     success: async (data) => {
-      console.log(data);
       if (data.statusCode === 200) {
         alert('게시가 완료되었습니다.');
         document.location.href = '/';

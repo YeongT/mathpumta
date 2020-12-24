@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+
 const Title = styled.a`
   padding: 0 5px;
   text-decoration: none;
@@ -44,7 +45,7 @@ const NavButton = styled.button`
   }
 `;
 
-const NavBar = () => {
+const NavBar = ({ cookies }) => {
   return (
     <ButtonWrapper>
       <InnerWrapper>
@@ -75,20 +76,41 @@ const NavBar = () => {
         </NavButton>
       </InnerWrapper>
       <InnerWrapper>
-        <NavButton
-          onClick={() => {
-            document.location.href = '/auth/signup';
-          }}
-        >
-          회원가입
-        </NavButton>
-        <NavButton
-          onClick={() => {
-            document.location.href = '/auth/login';
-          }}
-        >
-          로그인
-        </NavButton>
+        {cookies.get('userEmail') ? (
+          <>
+            <p style={{ fontWeight: 'bold', marginRight: '5px' }}>
+              다음유저로 로그인 됨: &nbsp;
+            </p>
+            <p style={{ fontSize: '12sp', marginRight: '10px' }}>
+              {cookies.get('userEmail')}
+            </p>
+            <NavButton
+              onClick={() => {
+                alert('로그아웃 되었습니다.');
+                cookies.remove('userEmail', { path: '/' });
+              }}
+            >
+              로그아웃
+            </NavButton>
+          </>
+        ) : (
+          <>
+            <NavButton
+              onClick={() => {
+                document.location.href = '/auth/signup';
+              }}
+            >
+              회원가입
+            </NavButton>
+            <NavButton
+              onClick={() => {
+                document.location.href = '/auth/login';
+              }}
+            >
+              로그인
+            </NavButton>
+          </>
+        )}
       </InnerWrapper>
     </ButtonWrapper>
   );
