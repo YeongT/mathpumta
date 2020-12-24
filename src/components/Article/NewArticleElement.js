@@ -129,7 +129,7 @@ const RenderArticleForm = () => {
           <ArticleInput
             style={{ width: '100%' }}
             type="text"
-            name="subject"
+            name="detailed"
             placeholder="소분류"
             maxLength="10"
           />
@@ -186,7 +186,7 @@ const RenderArticleForm = () => {
         </DifficultyLabel>
       </InputWrapper>
       <InputWrapper style={{ display: 'flex', justifyContent: 'center' }}>
-        <ArticleInput id="picturelink" name="pictures" type="hidden" />
+        <ArticleInput id="picturelink" name="image" type="hidden" />
         <PostButton onClick={newArticleHandler}>게시</PostButton>
       </InputWrapper>
     </>
