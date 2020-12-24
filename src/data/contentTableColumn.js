@@ -1,5 +1,5 @@
 const contentColumns = [
-  { id: 'num', label: '번', minWidth: '15px', maxWidth: '20px' },
+  { id: 'id', label: '번', minWidth: '15px', maxWidth: '20px' },
   {
     id: 'category',
     label: '카테고리',
@@ -22,7 +22,7 @@ const contentColumns = [
     align: 'left',
   },
   {
-    id: 'author',
+    id: 'email',
     label: '작성자',
     minWidth: '50px',
     maxWidth: '60px',

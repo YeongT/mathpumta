@@ -39,6 +39,10 @@ const FileSelecterLabel = styled.label`
     margin-left: 50px;
   }
   label {
+    :hover {
+      background-color: '#F5F5F5';
+      cursor: pointer;
+    }
     margin-left: 20px;
     font-family: 'Noto Sans KR';
     font-weight: bold;
@@ -72,6 +76,10 @@ const PostButton = styled.label`
   padding: 3px 25px;
   border: 2px solid black;
   border-radius: 8px;
+  :hover {
+    background-color: '#F5F5F5';
+    cursor: pointer;
+  }
 `;
 
 const ArticleRadioButton = (props) => (
@@ -93,7 +101,7 @@ const ArticleRadioButton = (props) => (
 );
 
 const textareaNotice =
-  "[주의사항]\n한 게시글에 한 질문씩!\n소분류 입력란에는 '도함수의 활용'같은 소단원 명을 기재해주세요.\n비속어를 포함하거나, 페이지 이용목적에 부합하지 않는 게시글은 제제 대상 입니다.";
+  "[주의사항]\n한 게시글에 한 질문씩!\n소분류 입력란에는 '도함수의 활용'같은 소단원 명 또는 기출 출처을 기재해주세요.\n비속어를 포함하거나, 페이지 이용목적에 부합하지 않는 게시글은 제제 대상 입니다.";
 const RenderArticleForm = () => {
   const [fileText, setFileText] = React.useState('선택된 사진이 없습니다.');
   const [difficulty, setdifficulty] = React.useState('MIDDLE');
@@ -121,20 +129,19 @@ const RenderArticleForm = () => {
           <ArticleInput
             style={{ width: '100%' }}
             type="text"
-            name="title"
+            name="subject"
             placeholder="소분류"
             maxLength="10"
           />
         </InputWrapper>
       </div>
-
       <InputWrapper>
         <InputLabel>질문 내용 : </InputLabel>
         <textarea
           style={{
             padding: '10px',
             resize: 'none',
-            height: '400px',
+            height: '330px',
             width: '100%',
             fontFamily: 'Noto Sans KR',
           }}
@@ -145,20 +152,13 @@ const RenderArticleForm = () => {
       <InputWrapper>
         <FileSelecterLabel aria-disabled>
           게시글 사진 :
-          <ArticleInput
-            type="text"
-            id="pictures"
-            name="pictures"
-            disabled
-            value={fileText}
-          />
+          <ArticleInput type="text" disabled value={fileText} />
           <InputLabel>
             파일 선택
             <ArticleInput
-              multiple
               type="file"
+              id="pictures"
               accept="image/*"
-              name="pictures"
               onChange={(event) =>
                 setFileText(
                   `${event.target.files.length}개의 파일이 선택되었습니다.`
@@ -185,7 +185,8 @@ const RenderArticleForm = () => {
           </RadioGroup>
         </DifficultyLabel>
       </InputWrapper>
-      <InputWrapper style={{display:'flex', justifyContent:'center'}}>
+      <InputWrapper style={{ display: 'flex', justifyContent: 'center' }}>
+        <ArticleInput id="picturelink" name="pictures" type="hidden" />
         <PostButton onClick={newArticleHandler}>게시</PostButton>
       </InputWrapper>
     </>
