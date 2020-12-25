@@ -24,6 +24,19 @@ const Main = () => {
       success: (data) => {
         setDataSet(data.output || []);
       },
+      error: (err) => {
+        setDataSet([
+          {
+            id: 0,
+            category: '오류',
+            detailed: '',
+            title: 'Server 연결 오류',
+            email: '연결',
+            difficulty: 500,
+            watch: -1,
+          },
+        ]);
+      },
     });
   }, []);
 

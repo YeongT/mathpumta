@@ -78,8 +78,13 @@ const NavBar = ({ cookies }) => {
       <InnerWrapper>
         {cookies.get('userEmail') ? (
           <>
-            <p style={{ fontWeight: 'bold', marginRight: '5px' }}>
-              다음유저로 로그인 됨: &nbsp;
+            <p
+              style={{
+                fontWeight: 'bold',
+                marginRight: '5px',
+              }}
+            >
+              로그인 됨: &nbsp;
             </p>
             <p style={{ fontSize: '12sp', marginRight: '10px' }}>
               {cookies.get('userEmail')}

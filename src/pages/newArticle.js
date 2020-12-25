@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import NewArticleElement from '../components/Article/NewArticleElement';
 
 const NewArticleWrapper = styled.div`
-  margin: 50px 5px;
+  margin: 30px 5px;
   margin-top: 20px;
   min-height: 600px;
   text-align: center;

@@ -8,6 +8,7 @@ import useStyles from './useStyle';
 
 const Login = (props) => {
   const classes = useStyles();
+  const [disabled, updateDisabled] = React.useState(false);
 
   return (
     <div style={{ textAlign: 'center', margin: 'auto' }}>
@@ -40,11 +41,12 @@ const Login = (props) => {
           />
           <Button
             fullWidth
+            disabled={disabled}
             variant="contained"
             color="primary"
             className={classes.submit}
             onClick={() => {
-              LoginHandler(props.cookies);
+              LoginHandler(props.cookies, updateDisabled);
             }}
           >
             로그인

@@ -15,6 +15,7 @@ const SignUp = () => {
   const [emailError, setEmailError] = React.useState(false);
   const [passwordError, setPasswordError] = React.useState(false);
   const [passwordChkError, setPasswordChkError] = React.useState(false);
+  const [disabled, updateDisabled] = React.useState(false);
 
   const ErrorHandler = (object) => {
     const emailRegex = /^[0-9a-zA-Z_\-.]+@[a-zA-Z_\-.]+?\.[a-zA-Z]{2,3}$/,
@@ -167,7 +168,8 @@ const SignUp = () => {
                 passwordError,
                 passwordChkError,
                 nameError,
-                schoolError
+                schoolError,
+                updateDisabled
               )
             }
             disabled={
@@ -175,7 +177,8 @@ const SignUp = () => {
               nameError ||
               emailError ||
               passwordChkError ||
-              passwordChkError
+              passwordChkError ||
+              disabled
             }
           >
             회원가입

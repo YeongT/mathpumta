@@ -188,7 +188,7 @@ const RenderArticleForm = (props) => {
       <InputWrapper style={{ display: 'flex', justifyContent: 'center' }}>
         <ArticleInput id="picturelink" name="image" type="hidden" />
         <ArticleInput id="userEmail" name="email" type="hidden" />
-        <PostButton onClick={() => newArticleHandler(props.cookies)}>게시</PostButton>
+        <PostButton id="articleSubmit" onClick={() => newArticleHandler(props.cookies)}>게시</PostButton>
       </InputWrapper>
     </>
   );
