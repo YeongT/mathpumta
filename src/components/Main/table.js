@@ -126,6 +126,7 @@ const StickyHeadTable = (props) => {
   };
 
   const handleChangeRowsPerPage = (event) => {
+    if (event.target.value > props.dataSet.length) return;
     setRowsPerPage(parseInt(event.target.value, 10));
     setPage(0);
   };

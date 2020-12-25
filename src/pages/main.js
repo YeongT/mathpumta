@@ -12,7 +12,7 @@ const Main = () => {
         detailed: '로딩중',
         title: '전체 게시글을 로딩 중입니다.',
         author: '시스템',
-        difficulty: 200,
+        difficulty: 0,
         watch: 0,
       },
     ]);

@@ -40,7 +40,12 @@ const App = (props) => {
               path="/article/new"
               component={() => <NewArticle cookies={props.cookies} />}
             />
-            <Route path="/article/view/:postid" component={Article} />
+            <Route
+              path="/article/view/:postid"
+              component={({ match }) => (
+                <Article params={match.params} cookies={props.cookies} />
+              )}
+            />
             <Route path="/auth/signup" component={Signup} />
             <Route
               path="/auth/login"

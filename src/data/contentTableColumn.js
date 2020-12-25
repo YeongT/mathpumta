@@ -3,8 +3,8 @@ const contentColumns = [
   {
     id: 'category',
     label: '카테고리',
-    minWidth: '30px',
-    maxWidth: '40px',
+    minWidth: '40px',
+    maxWidth: '50px',
     align: 'left',
   },
   {
@@ -17,15 +17,15 @@ const contentColumns = [
   {
     id: 'title',
     label: '게시글 제목',
-    minWidth: '120px',
-    maxWidth: '140px',
+    minWidth: '110px',
+    maxWidth: '130px',
     align: 'left',
   },
   {
     id: 'email',
     label: '작성자',
-    minWidth: '50px',
-    maxWidth: '60px',
+    minWidth: '40px',
+    maxWidth: '50px',
     align: 'right',
   },
   {
